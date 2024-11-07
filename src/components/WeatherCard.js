@@ -110,7 +110,7 @@ const WeatherCard = ({ data, locationData, type }) => {
 
             {/* Forecast Chart Section*/}
             {type === 'forecast' && (
-                <div className="mt-6 w-full w-[50%]  h-[350px] bg-white rounded-xl justify-self-center">
+                <div className="mt-6 w-[50%]  h-[350px] bg-white rounded-xl justify-self-center">
                     <Line
                         data={chartData}
                         options={{
