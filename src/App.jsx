@@ -21,7 +21,7 @@ function App() {
       try {
         
         const geocodeResponse = await axios.get(
-          `http://api.weatherapi.com/v1/current.json?key=e668e9b859374576bb765451240711&q=${city}`
+          `https://api.weatherapi.com/v1/current.json?key=e668e9b859374576bb765451240711&q=${city}`
         );
         setWeatherData(geocodeResponse.data.current);
         setLocationData(geocodeResponse.data.location)
@@ -40,7 +40,7 @@ function App() {
     const getForecastData=async()=>{
       try {
         const forecastResponse = await axios.get(
-        `http://api.weatherapi.com/v1/marine.json?key=e668e9b859374576bb765451240711&q=${selectedCity}&days=7`
+        `https://api.weatherapi.com/v1/marine.json?key=e668e9b859374576bb765451240711&q=${selectedCity}&days=7`
         );
         console.log('g',forecastResponse)
         setWeatherData(forecastResponse.data.forecast);

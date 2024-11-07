@@ -17,7 +17,7 @@ const WeatherForm = ({ onSearch }) => {
   const onCityChange = async (e) => {
     setCity(e.target.value);
     if (e.target.value.trim()) {
-      const cities = await axios.get(`http://api.weatherapi.com/v1/search.json?key=e668e9b859374576bb765451240711&q=${e.target.value}`);
+      const cities = await axios.get(`https://api.weatherapi.com/v1/search.json?key=e668e9b859374576bb765451240711&q=${e.target.value}`);
       if (cities.data.length) {
         setSearchCities(cities.data);
       } else {
